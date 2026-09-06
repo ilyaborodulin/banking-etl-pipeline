@@ -1,0 +1,16 @@
+account_id,customer_id,account_type,currency,opened_at,status
+1,1,debit,RUB,2025-01-16,active
+2,1,savings,RUB,2025-02-21,closed
+3,2,debit,USD,2025-03-11,active
+4,3,debit,EUR,2025-03-14,active
+5,3,savings,EUR,2025-03-18,closed
+6,4,debit,EUR,2025-03-02,active
+7,5,debit,RUB,2025-03-13,active
+8,6,savings,USD,2025-04-06,closed
+9,7,debit,EUR,2025-04-22,active
+10,8,debit,RUB,2025-05-09,active
+11,9,savings,USD,2025-05-10,closed
+12,10,debit,EUR,2025-05-11,active
+
+
+

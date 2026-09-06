@@ -285,18 +285,3 @@ SELECT COUNT(*) FROM rejected_transactions;
 
 Количество строк в `stg_transactions` и `rejected_transactions` в сумме должно совпадать с количеством исходных транзакций.
 
-## Что я отработал в этом проекте
-
-На проекте я практически разобрал:
-
-- построение простого ETL-пайплайна;
-- разделение данных на raw, staging и rejected;
-- проверки Data Quality;
-- обработку некорректных записей;
-- загрузку CSV в PostgreSQL;
-- `COPY`;
-- транзакции, `COMMIT` и `ROLLBACK`;
-- повторный batch-запуск;
-- зависимости между задачами в Airflow;
-- запуск PostgreSQL и Airflow через Docker Compose;
-- взаимодействие контейнеров через Docker network.

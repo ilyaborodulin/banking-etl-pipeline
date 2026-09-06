@@ -1,0 +1,26 @@
+[2026-09-06T17:18:29.179+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-09-06T17:18:29.181+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: banking_pipeline.generate_transactions manual__2026-09-06T17:18:27.600163+00:00 [queued]>
+[2026-09-06T17:18:29.183+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: banking_pipeline.generate_transactions manual__2026-09-06T17:18:27.600163+00:00 [queued]>
+[2026-09-06T17:18:29.183+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-09-06T17:18:29.187+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): generate_transactions> on 2026-09-06 17:18:27.600163+00:00
+[2026-09-06T17:18:29.189+0000] {standard_task_runner.py:72} INFO - Started process 122 to run task
+[2026-09-06T17:18:29.191+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'banking_pipeline', 'generate_transactions', 'manual__2026-09-06T17:18:27.600163+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/banking_pipeline_dag.py', '--cfg-path', '/tmp/tmpoqij9c1k']
+[2026-09-06T17:18:29.192+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask generate_transactions
+[2026-09-06T17:18:29.204+0000] {task_command.py:467} INFO - Running <TaskInstance: banking_pipeline.generate_transactions manual__2026-09-06T17:18:27.600163+00:00 [running]> on host bac05bedd58a
+[2026-09-06T17:18:29.224+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='banking_pipeline' AIRFLOW_CTX_TASK_ID='generate_transactions' AIRFLOW_CTX_EXECUTION_DATE='2026-09-06T17:18:27.600163+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-06T17:18:27.600163+00:00'
+[2026-09-06T17:18:29.224+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-09-06T17:18:29.240+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-09-06T17:18:29.241+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow && python /opt/airflow/src/generate_transactions.py']
+[2026-09-06T17:18:29.244+0000] {subprocess.py:99} INFO - Output:
+[2026-09-06T17:18:29.589+0000] {subprocess.py:106} INFO -    transaction_id  account_id  ...   amount      transaction_ts
+[2026-09-06T17:18:29.591+0000] {subprocess.py:106} INFO - 0               1           6  ...  2952.03 2025-04-09 15:14:06
+[2026-09-06T17:18:29.592+0000] {subprocess.py:106} INFO - 1               2           6  ...  2848.24 2025-06-29 00:23:36
+[2026-09-06T17:18:29.592+0000] {subprocess.py:106} INFO - 2               3           8  ...  7902.74 2025-06-11 22:45:25
+[2026-09-06T17:18:29.592+0000] {subprocess.py:106} INFO - 
+[2026-09-06T17:18:29.593+0000] {subprocess.py:106} INFO - [3 rows x 6 columns]
+[2026-09-06T17:18:29.616+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-09-06T17:18:29.623+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-09-06T17:18:29.623+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=banking_pipeline, task_id=generate_transactions, run_id=manual__2026-09-06T17:18:27.600163+00:00, execution_date=20260906T171827, start_date=20260906T171829, end_date=20260906T171829
+[2026-09-06T17:18:29.661+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-09-06T17:18:29.669+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-06T17:18:29.670+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
